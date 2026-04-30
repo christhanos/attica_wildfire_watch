@@ -21,6 +21,6 @@ class WildfireClassifier(nn.Module):
 
     def forward(self,x):
         # Pass the incoming image 'x' through the entire ResNet18 pipeline
-        x = self.base_model
+        x = self.base_model(x)
         return x 
 

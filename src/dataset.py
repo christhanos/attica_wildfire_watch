@@ -3,7 +3,8 @@
 import os #navigate through my folder paths
 import torch #convert images into PyTorch tensors
 from torchvision import transforms #we will use this to resize the images
-from PIL import Image #to be able to open the images
+from PIL import Image, ImageFile #to be able to open the images
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 from torch.utils.data import Dataset #the blueprint we are going to inherit from
 
 class SatelliteWildfireDataset(Dataset):
